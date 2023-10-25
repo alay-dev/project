@@ -11,6 +11,8 @@ export const GOGOLE_SCOPES =
   "https://www.googleapis.com/auth/drive.metadata.readonly https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/spreadsheets.readonly";
 
 export const GOOGLE_REDIRECT_URI =
-  "http://localhost:3000/dashboard/select-file";
+  process.env.NODE_ENV === "production"
+    ? "https://clever-zuccutto-0daac7.netlify.app/dashboard/select-file"
+    : "http://localhost:3000/dashboard/select-file";
 
 export const GOOGLE_AUTH_URL = `https://accounts.google.com/o/oauth2/v2/auth?scope=${GOGOLE_SCOPES}&include_granted_scopes=true&response_type=token&state=state_parameter_passthrough_value&redirect_uri=${GOOGLE_REDIRECT_URI}&client_id=${GOOGLE_CLIENT_ID}`;
