@@ -12,7 +12,7 @@ export const GOGOLE_SCOPES =
 
 export const GOOGLE_REDIRECT_URI =
   process.env.NODE_ENV === "production"
-    ? "https://clever-zuccutto-0daac7.netlify.app/dashboard/select-file"
+    ? "https://project-rust-nu.vercel.app/dashboard/select-file"
     : "http://localhost:3000/dashboard/select-file";
 
 export const GOOGLE_AUTH_URL = `https://accounts.google.com/o/oauth2/v2/auth?scope=${GOGOLE_SCOPES}&include_granted_scopes=true&response_type=token&state=state_parameter_passthrough_value&redirect_uri=${GOOGLE_REDIRECT_URI}&client_id=${GOOGLE_CLIENT_ID}`;
