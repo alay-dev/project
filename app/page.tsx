@@ -1,5 +1,6 @@
 "use client";
 
+import { CircularProgress } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -9,5 +10,9 @@ export default function Home() {
     router.push("/dashboard");
   }, []);
 
-  return <main className=""></main>;
+  return (
+    <main className="w-full h-screen flex items-center justify-center">
+      <CircularProgress />
+    </main>
+  );
 }
